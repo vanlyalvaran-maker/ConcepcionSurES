@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concepcion Sur Elementary School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Great+Vibes&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#B0236A;--rose-d:#8A1952;--blush:#FDEFF5;--pink:#F6C6DA;--gold:#B8892D;--gold-l:#E9D3A0;--ink:#3A1F2E;--paper:#FFFBFD}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 'Nunito Sans',sans-serif;color:var(--ink);background:var(--paper)}
+h1,h2,h3{font-family:'Fraunces',serif;line-height:1.2;margin:0}
+a{color:var(--rose)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:2px solid var(--gold-l)}
+.bar{display:flex;align-items:center;gap:14px;padding:10px 20px;max-width:1080px;margin:0 auto}
+.bar .names{flex:1;font-family:'Fraunces',serif;font-weight:600;color:var(--rose);font-size:1.05rem;line-height:1.2}
+.bar .names small{display:block;font:600 .75rem 'Nunito Sans';color:var(--gold)}
+.logo{width:52px;height:52px;object-fit:contain;border-radius:50%;background:var(--blush)}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:8px 12px;border-radius:20px;text-decoration:none;color:var(--ink);font-weight:600;font-size:.92rem}
+nav a:hover{background:var(--blush);color:var(--rose)}
+.hero{background:linear-gradient(135deg,var(--blush),var(--pink));padding:72px 0 80px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--gold),var(--gold-l),var(--gold))}
+.script{font-family:'Great Vibes',cursive;font-size:clamp(2rem,6vw,3.4rem);color:var(--rose);margin:0}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);color:var(--rose-d);margin:6px 0 12px}
+.hero p{max-width:560px;font-size:1.1rem}
+.id{display:inline-block;margin-top:6px;padding:4px 14px;border:1.5px solid var(--gold);border-radius:20px;color:var(--gold);font-weight:700;background:#fff}
+.btn{display:inline-block;margin-top:22px;padding:12px 26px;border:0;border-radius:28px;background:var(--rose);color:#fff;font:700 1rem 'Nunito Sans';text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--rose-d)}
+.btn[disabled]{opacity:.6;cursor:wait}
+section{padding:60px 0}
+section h2{font-size:2rem;color:var(--rose-d);margin-bottom:6px}
+.sub{color:#6b4a5b;margin:0 0 26px}
+.rule{width:64px;height:3px;background:var(--gold);margin:10px 0 18px;border:0}
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.values div{padding:18px;background:var(--blush);border-left:4px solid var(--gold);border-radius:6px}
+.values h3{font-size:1.1rem;color:var(--rose)}
+.values p{margin:4px 0 0;font-size:.95rem}
+.alt{background:var(--blush)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+@media(max-width:760px){.two{grid-template-columns:1fr}nav a{padding:6px 9px}.bar{flex-wrap:wrap}}
+form{background:#fff;padding:24px;border:1.5px solid var(--pink);border-radius:10px}
+label{display:block;font-weight:700;margin:14px 0 4px}
+input,select{width:100%;padding:11px 12px;border:1.5px solid #dcb7c8;border-radius:8px;font:inherit;background:#fff}
+.drop{border:2px dashed var(--gold);border-radius:10px;padding:18px;text-align:center;background:var(--paper)}
+.hint{font-size:.85rem;color:#7a5a6b;margin:4px 0 0}
+.status{margin-top:14px;font-weight:700}
+.err{color:#b3261e}
+.news{display:grid;gap:14px}
+.news article{background:#fff;border:1.5px solid var(--pink);border-left:5px solid var(--rose);border-radius:8px;padding:16px 18px}
+.news time{font-size:.82rem;color:var(--gold);font-weight:700}
+.news h3{font-size:1.15rem;margin:2px 0 4px}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.gal img,.gal .ph{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;border:2px solid var(--gold-l);background:var(--pink)}
+.gal .ph{display:grid;place-items:center;color:var(--rose);font-family:'Great Vibes';font-size:1.6rem}
+footer{background:var(--rose-d);color:#fff;padding:36px 0;border-top:5px solid var(--gold)}
+footer a{color:var(--gold-l)}
+footer .cols{display:flex;flex-wrap:wrap;gap:30px;align-items:center}
+footer .logos{display:flex;gap:12px}
+footer .logo{background:#fff}
+dialog{border:3px solid var(--gold);border-radius:16px;padding:32px;max-width:420px;text-align:center;color:var(--ink)}
+dialog::backdrop{background:rgba(58,31,46,.55)}
+dialog .script{font-size:2.6rem}
+@media(prefers-reduced-motion:no-preference){.hero .script{animation:rise .9s ease both}@keyframes rise{from{opacity:0;transform:translateY(14px)}}}
+
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:center}
+.idrow{display:flex;align-items:center;gap:14px;margin-top:8px}
+.idrow .logo{width:72px;height:72px;border:2px solid var(--gold);background:#fff}
+.idrow .id{margin:0}
+.leader-wrap{position:relative;text-align:center;padding-top:96px}
+.bubble{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(290px,92%);background:#fff;border:2.5px solid var(--gold);border-radius:20px;padding:10px 16px 12px;box-shadow:0 6px 18px rgba(138,25,82,.15)}
+.bubble:after{content:"";position:absolute;bottom:-14px;left:50%;margin-left:-12px;border:12px solid transparent;border-top-color:var(--gold);border-bottom:0}
+.bubble .script{font-size:2.1rem;line-height:1.1}
+.bubble small{display:block;font-weight:700;color:var(--ink)}
+.leader{width:min(300px,80%);height:auto;display:block;margin:0 auto}
+.cap{font:italic 600 .95rem 'Fraunces',serif;color:var(--rose-d);margin:0}
+.leader .wave{transform-box:view-box;transform-origin:200px 272px}
+.leader .bob{transform-box:view-box;transform-origin:150px 340px}
+.leader .eyes{transform-box:fill-box;transform-origin:center}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){
+ .leader .wave{animation:wave 1.4s ease-in-out infinite}
+ .leader .bob{animation:bob 3.2s ease-in-out infinite}
+ .leader .eyes{animation:blink 4.5s infinite}
+ @keyframes wave{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(14deg)}}
+ @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+ @keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="bar">
+  <img class="logo" src="assets/school-logo.png" alt="Concepcion Sur Elementary School logo" onerror="this.style.visibility='hidden'">
+  <div class="names">Concepcion Sur Elementary School<small>School ID 111402</small></div>
+  <nav aria-label="Main">
+   <a href="#home">Home</a><a href="#reports">Submit Reports</a><a href="#news">Announcements</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </nav>
+  <img class="logo" src="assets/deped-logo.png" alt="DepEd logo" onerror="this.style.visibility='hidden'">
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="wrap">
+  <div>
+   <h1>Concepcion Sur Elementary School</h1>
+   <p>A school of endless possibilities, where every learner is seen, every teacher is valued, and every day is a chance to grow.</p>
+   <div class="idrow">
+    <img class="logo" src="assets/school-logo.png" alt="Concepcion Sur Elementary School logo" onerror="this.style.display='none'">
+    <span class="id">School ID 111402</span>
+   </div>
+   <a class="btn" href="#reports">Submit a report</a>
+  </div>
+  <div class="leader-wrap">
+   <div class="bubble"><p class="script" id="greet" style="font-size:2.1rem">Magandang araw po!</p><small>Welcome sa CSES website!</small></div>
+   <svg class="leader" viewBox="0 0 300 340" role="img" aria-label="Animated illustration of a smiling woman school leader waving hello">
+    <g class="bob">
+     <path d="M82 120C70 60 110 30 150 30C190 30 232 60 218 120C226 190 222 250 232 300L68 300C78 250 74 190 82 120Z" fill="#4a2c22"/>
+     <path d="M40 340C44 280 80 262 150 262C220 262 256 280 260 340Z" fill="#F08DB4"/>
+     <path d="M122 262L150 306L178 262Z" fill="#fbf1e6"/>
+     <path d="M122 262L150 306L132 340L98 340L108 276Z" fill="#E2709C"/>
+     <path d="M178 262L150 306L168 340L202 340L192 276Z" fill="#E2709C"/>
+     <path d="M60 340C48 300 60 276 84 270L104 290C90 300 86 320 90 340Z" fill="#F08DB4"/>
+     <rect x="136" y="214" width="28" height="52" rx="12" fill="#f1c2a2"/>
+     <ellipse cx="150" cy="150" rx="52" ry="62" fill="#f6cdb0"/>
+     <path d="M96 140C96 82 130 66 158 70C190 74 206 100 204 140C190 112 160 98 130 100C112 104 100 120 96 140Z" fill="#4a2c22"/>
+     <g class="eyes"><ellipse cx="130" cy="156" rx="5" ry="6.5" fill="#2b1810"/><ellipse cx="170" cy="156" rx="5" ry="6.5" fill="#2b1810"/></g>
+     <path d="M120 142Q130 136 140 141M160 141Q170 136 180 142" stroke="#4a2c22" stroke-width="3" fill="none" stroke-linecap="round"/>
+     <circle cx="116" cy="176" r="9" fill="#f08db4" opacity=".35"/><circle cx="184" cy="176" r="9" fill="#f08db4" opacity=".35"/>
+     <path d="M130 184Q150 206 170 184Q150 192 130 184Z" fill="#b0236a" stroke="#b0236a" stroke-width="3" stroke-linejoin="round"/>
+     <circle cx="112" cy="286" r="7" fill="#B8892D"/>
+     <g class="wave">
+      <path d="M196 272C228 262 246 232 248 206L226 200C222 226 208 246 184 258Z" fill="#F08DB4"/>
+      <circle cx="238" cy="190" r="16" fill="#f6cdb0"/>
+      <path d="M226 180L222 166M236 176L235 160M246 178L249 163" stroke="#f6cdb0" stroke-width="7" stroke-linecap="round"/>
+     </g>
+    </g>
+   </svg>
+   <p class="cap">Ang inyong School Head</p>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2>About our school</h2><hr class="rule" style="margin-left:0">
+  <p class="sub">Concepcion Sur, Santa Maria, Romblon &middot; Schools Division of Romblon, DepEd MIMAROPA</p>
+  <div class="values">
+   <div><h3>Compassion</h3><p>We care for learners and people first.</p></div>
+   <div><h3>Integrity</h3><p>We do what is right in every action.</p></div>
+   <div><h3>Collaboration</h3><p>Teachers, parents and community, together.</p></div>
+   <div><h3>Innovation</h3><p>Better ways to deliver quality education.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="reports">
+ <div class="wrap two">
+  <div>
+   <h2>Submit your report</h2><hr class="rule" style="margin-left:0">
+   <p>Thank you for everything you do for our learners, teachers. Upload your report here and it goes straight to the school's records.</p>
+   <p class="hint">Accepted files: Word (.doc, .docx), PDF, and Excel (.xls, .xlsx). Maximum 15 MB per file. No login needed.</p>
+  </div>
+  <form id="f">
+   <label for="name">Full name</label><input id="name" required autocomplete="name">
+   <label for="grade">Grade level</label>
+   <select id="grade" required><option value="">Choose grade level</option><option>Kindergarten</option><option>Grade 1</option><option>Grade 2</option><option>Grade 3</option><option>Grade 4</option><option>Grade 5</option><option>Grade 6</option><option>School Head / Non-teaching</option></select>
+   <label for="type">Report type</label>
+   <select id="type" required><option value="">Choose report type</option><option>Monthly Report</option><option>Quarterly Report</option><option>Accomplishment Report</option><option>Class Program / Lesson Plan</option><option>Learner Assessment / Grades</option><option>Other</option></select>
+   <label for="file">File</label>
+   <div class="drop"><input id="file" type="file" accept=".doc,.docx,.pdf,.xls,.xlsx" required></div>
+   <button class="btn" id="go" type="submit">Send report</button>
+   <div class="status" id="st" role="status" aria-live="polite"></div>
+  </form>
+ </div>
+</section>
+
+<section id="news">
+ <div class="wrap">
+  <h2>Announcements and news</h2><hr class="rule" style="margin-left:0">
+  <div class="news" id="newsList"><p class="sub">Loading announcements...</p></div>
+ </div>
+</section>
+
+<section class="alt" id="gallery">
+ <div class="wrap">
+  <h2>Gallery</h2><hr class="rule" style="margin-left:0">
+  <div class="gal" id="galList"></div>
+ </div>
+</section>
+</main>
+
+<footer id="contact">
+ <div class="wrap cols">
+  <div class="logos">
+   <img class="logo" src="assets/school-logo.png" alt="" onerror="this.style.display='none'">
+   <img class="logo" src="assets/deped-logo.png" alt="" onerror="this.style.display='none'">
+  </div>
+  <div>
+   <strong>Concepcion Sur Elementary School</strong><br>
+   Concepcion Sur, Santa Maria, Romblon<br>
+   School ID: 111402<br>
+   Email: <a href="mailto:111402@deped.gov.ph">111402@deped.gov.ph</a><br>
+   Facebook: <a href="https://www.facebook.com/search/top?q=DepEd%20Concepcion%20Sur%20Elementary%20School" target="_blank" rel="noopener">DepEd Concepcion Sur Elementary School</a>
+  </div>
+ </div>
+</footer>
+
+<dialog id="thanks">
+ <p class="script">Maraming salamat po!</p>
+ <p id="thanksMsg">Natanggap na namin ang inyong report. Ang inyong sipag ay malaking tulong sa ating mga mag-aaral.</p>
+ <button class="btn" onclick="document.getElementById('thanks').close()">Close</button>
+</dialog>
+
+<script>
+// 1) Paste your Apps Script Web App URL here (see SETUP.md)
+const API = "PASTE_YOUR_WEB_APP_URL_HERE";
+const MAX = 15 * 1024 * 1024;
+const $ = id => document.getElementById(id);
+
+const h = new Date().getHours();
+$("greet").textContent = h < 12 ? "Magandang umaga po!" : h < 18 ? "Magandang hapon po!" : "Magandang gabi po!";
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const ready = () => !API.startsWith("PASTE");
+
+async function load() {
+  const news = $("newsList"), gal = $("galList");
+  if (ready()) {
+    try {
+      const [a, g] = await Promise.all([
+        fetch(API + "?type=announcements").then(r => r.json()),
+        fetch(API + "?type=gallery").then(r => r.json())
+      ]);
+      news.innerHTML = a.items.length ? a.items.map(i =>
+        `<article><time>${esc(i.date)}</time><h3>${esc(i.title)}</h3><p>${esc(i.body)}</p></article>`).join("")
+        : "<p class='sub'>No announcements yet. Please check back soon.</p>";
+      gal.innerHTML = g.items.map(i =>
+        `<img loading="lazy" src="${esc(i.url)}" alt="${esc(i.caption || 'School photo')}">`).join("");
+      if (!g.items.length) throw 0;
+      return;
+    } catch (e) {}
+  }
+  if (!ready()) news.innerHTML = "<p class='sub'>Announcements will appear here once the Google Sheet is connected.</p>";
+  gal.innerHTML = Array.from({length: 6}, () => "<div class='ph'>Photo soon</div>").join("");
+}
+load();
+
+const toB64 = f => new Promise((res, rej) => {
+  const r = new FileReader();
+  r.onload = () => res(String(r.result).split(",")[1]);
+  r.onerror = () => rej(new Error("Cannot read file"));
+  r.readAsDataURL(f);
+});
+
+$("f").addEventListener("submit", async e => {
+  e.preventDefault();
+  const st = $("st"), btn = $("go"), file = $("file").files[0];
+  st.className = "status";
+  if (!ready()) { st.className = "status err"; st.textContent = "The website is not yet connected to the Google Sheet. Please tell the school head."; return; }
+  if (!file) return;
+  if (!/\.(docx?|pdf|xlsx?)$/i.test(file.name)) { st.className = "status err"; st.textContent = "Please choose a Word, PDF, or Excel file."; return; }
+  if (file.size > MAX) { st.className = "status err"; st.textContent = "This file is larger than 15 MB. Please compress it and try again."; return; }
+  btn.disabled = true; st.textContent = "Sending your report...";
+  try {
+    const body = JSON.stringify({
+      name: $("name").value.trim(), grade: $("grade").value, type: $("type").value,
+      filename: file.name, mime: file.type || "application/octet-stream", data: await toB64(file)
+    });
+    const res = await fetch(API, { method: "POST", headers: {"Content-Type": "text/plain;charset=utf-8"}, body });
+    const out = await res.json();
+    if (!out.ok) throw new Error(out.error || "Upload failed");
+    st.textContent = "";
+    $("thanksMsg").textContent = "Natanggap na namin ang inyong " + $("type").value + ", " + $("name").value.trim().split(" ")[0] + ". Ang inyong sipag ay malaking tulong sa ating mga mag-aaral.";
+    $("f").reset(); $("thanks").showModal();
+  } catch (err) {
+    st.className = "status err"; st.textContent = "The report was not sent. Check your internet and try again.";
+  }
+  btn.disabled = false;
+});
+</script>
+</body>
+</html>
